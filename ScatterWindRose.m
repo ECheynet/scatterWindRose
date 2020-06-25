@@ -21,8 +21,8 @@ function [varargout] =ScatterWindRose(X,Y,varargin)
 % varargout{2}: colorbar handle
 % 
 %% Author info
-% Author: E. Cheynet, Universitetet i Stavanger
-% Last modified: 2016-11-08
+% Author: E. Cheynet, UiB, Norway
+% Last modified: 2020-06-25
 
 %% Input parser
 % Number of outputs must be >=3 and <=4.
@@ -143,10 +143,15 @@ uistack(h, 'bottom')
         cos_scale = cosd(-20);
         sin_scale = sind(-20);
         % draw radial circles
-        for ii = 1:Ncirc,
+        for ii = 1:Ncirc
+            if ii<Ncirc
+                COLOR = [0.5,0.5,0.5];
+            else
+                COLOR = [0.2 0.2 0.2];
+            end
             line(xunit*ii.*(Ymax-Ymin)./Ncirc,...
-                yunit*ii.*(Ymax-Ymin)./Ncirc,'color','k',...
-                'linestyle',':');
+                yunit*ii.*(Ymax-Ymin)./Ncirc,'color',COLOR,...
+                'linestyle','-');
             if ii >= Ncirc,
                 text(ii.*(Ymax-Ymin)./Ncirc.*cos_scale,...
                     ii.*(Ymax-Ymin)./Ncirc.*sin_scale, ...
@@ -167,8 +172,8 @@ uistack(h, 'bottom')
         theta = 0:30:360;
         cs = [-cosd(theta); cosd(theta)];
         sn = [-sind(theta); sind(theta)];
-        line((Ymax-Ymin)*cs,(Ymax-Ymin)*sn,'color','k',...
-            'linestyle',':')
+        line((Ymax-Ymin)*cs,(Ymax-Ymin)*sn,'color',[0.5,0.5,0.5],...
+            'linestyle','-')
         % annotate spokes in degrees
         rt = 1.1*(Ymax-Ymin);
         for iAngle = 1:numel(thetaLabel),
