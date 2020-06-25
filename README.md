@@ -9,3 +9,8 @@ The objective is to plot a wind rose that shows complementary information to the
 - a wind rose with 2 variables and multiple sensors.
 
 Example of wind roses with scattered data: Figure 4 in https://link.springer.com/article/10.1007/s00348-016-2275-9
+
+## Example 
+
+![3-variate wind rose](illustration.png)
+
