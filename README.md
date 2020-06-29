@@ -3,6 +3,7 @@
 Plot a wind rose as a scatter plot
 
 [![View Wind rose as a scatter plot on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://se.mathworks.com/matlabcentral/fileexchange/49488-wind-rose-as-a-scatter-plot)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3922243.svg)](https://doi.org/10.5281/zenodo.3922243)
 
 Plot a wind rose as a scatter plot with two or three variables to optimize the quantity of information that can be obtained on a single figure. 
 The objective is to plot a wind rose that shows complementary information to the one obtained with the classical wind roses. These 2 possibilities are here highlighted by examples:
